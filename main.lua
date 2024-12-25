@@ -16,7 +16,7 @@ local eventMappings = {
         return player.CharacterRemoving
     end,
     chatted = function(player)
-        return player.Chatted; return player
+        return player, player.Chatted
     end,
     died = function(player)
         return player.Character and player.Character:WaitForChild("Humanoid").Died
